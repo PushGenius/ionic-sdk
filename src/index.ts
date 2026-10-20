@@ -15,7 +15,17 @@ type Native = {
 
 const native = registerPlugin<Native>("PushGenius");
 
+class PushSubscription {
+  optIn() {
+    return native.optIn();
+  }
+  optOut() {
+    return native.optOut();
+  }
+}
+
 class UserNamespace {
+  pushSubscription = new PushSubscription();
   addTag(key: string, value: string) {
     return this.addTags({ [key]: value });
   }
