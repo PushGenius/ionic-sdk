@@ -1,7 +1,7 @@
 {
   "name": "@pushgenius/ionic",
   "version": "0.1.0",
-  "description": "PushGenius Capacitor plugin (OneSignal-compatible public API)",
+  "description": "PushGenius Capacitor plugin",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "files": ["src", "ios", "android"],

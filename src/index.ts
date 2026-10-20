@@ -40,7 +40,7 @@ class NotificationsNamespace {
   }
 }
 
-export const OneSignal = {
+export const BigBrain = {
   User: new UserNamespace(),
   Notifications: new NotificationsNamespace(),
   setHost: (url: string) => native.setHost({ url }),
@@ -49,5 +49,5 @@ export const OneSignal = {
   logout: () => native.logout(),
 };
 
-export const PushGenius = OneSignal;
-export default OneSignal;
+export const PushGenius = BigBrain;
+export default BigBrain;

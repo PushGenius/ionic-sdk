@@ -20,29 +20,29 @@ public class PushGeniusPlugin: CAPPlugin, CAPBridgedPlugin {
   }
 
   @objc func initialize(_ call: CAPPluginCall) {
-    OneSignal.initialize(call.getString("appId") ?? "", withLaunchOptions: nil)
+    BigBrain.initialize(call.getString("appId") ?? "", withLaunchOptions: nil)
     call.resolve()
   }
 
   @objc func login(_ call: CAPPluginCall) {
-    OneSignal.login(call.getString("externalId") ?? "")
+    BigBrain.login(call.getString("externalId") ?? "")
     call.resolve()
   }
 
   @objc func logout(_ call: CAPPluginCall) {
-    OneSignal.logout()
+    BigBrain.logout()
     call.resolve()
   }
 
   @objc func addTags(_ call: CAPPluginCall) {
     if let tags = call.getObject("tags") as? [String: String] {
-      OneSignal.User.addTags(tags)
+      BigBrain.User.addTags(tags)
     }
     call.resolve()
   }
 
   @objc func requestPermission(_ call: CAPPluginCall) {
-    OneSignal.Notifications.requestPermission(true) { granted in
+    BigBrain.Notifications.requestPermission(true) { granted in
       call.resolve(["granted": granted])
     }
   }
