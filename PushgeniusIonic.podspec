@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "15.0"
   s.swift_version = "5.9"
   s.frameworks   = "UserNotifications"
+  s.resource_bundles = { "PushgeniusIonicPrivacy" => ["ios/Sources/PushGeniusIonic/Core/PrivacyInfo.xcprivacy"] }
   s.dependency "Capacitor"
 end
